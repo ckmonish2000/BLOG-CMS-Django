@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<ul>
+{% for x in stuff  %}
+<li><a href="http://127.0.0.1:8000/view/{{x.title}}">{{x.title}}<li>
+{% endfor %}
+</ul>
+{% endblock body %}
