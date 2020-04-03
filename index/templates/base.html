@@ -6,7 +6,11 @@
     <title>Blog</title>
 </head>
 <body>
+{% if user.is_authenticated %}
     {% block body %}
     {% endblock body %}
+    {% else %}
+    <p>please login<a href="http://127.0.0.1:8000/accounts/login/">login</a></p>
+{% endif %}
 </body>
 </html>
